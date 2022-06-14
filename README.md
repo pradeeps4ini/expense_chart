@@ -2,7 +2,7 @@
 
 *Frontend Mentor Challenge
 
-Live: [pradeeps4ini.github.io/expense_chart](pradeeps4ini.github.io/expense_chart)
+Live: [https://pradeeps4ini.github.io/expense_chart/](https://pradeeps4ini.github.io/expense_chart/)
 
 Hello, there. This is an expense chart made using HTML, CSS and JS. The bars in the chart are interactive. One can over over them to view the amount they represent. 
 
