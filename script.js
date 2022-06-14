@@ -53,7 +53,7 @@ const filterJsonData = function() {
 
 const drawBars = function(div, amount, bgColor) {
   const height = amount;
-  
+  div.setAttribute("data-stat", `$${amount}`); 
   div.style.cssText += `height: ${amount * 2}px; background-color: ${bgColor};`;
 }; 
 
@@ -72,20 +72,6 @@ const greatestNumIndex = function(arr) {
 }
 
 
-const showAmountOnHover = function(div, amount) {
-  
-  div.parentNode.children[0].textContent = `$${amount}`;
-
-  div.addEventListener("mouseover", () => {
-    div.parentNode.children[0].style.cssText += "display: block;"
-  });
-
-  div.addEventListener("mouseout", () => {
-    div.parentNode.children[0].style.cssText += "display: none;"
-  });
-}
-
-
 const makeBars = function() {
   const amounts = filterJsonData();
   const barDivs = domElements.bars;   
@@ -100,7 +86,6 @@ const makeBars = function() {
       
     (i === maxAmountIndex) ? bgColor = maxBgColor : bgColor = otherBgColor;
     drawBars(barDivs[i], amounts[i], bgColor);
-    showAmountOnHover(barDivs[i], amounts[i]);
   };
 };
 
